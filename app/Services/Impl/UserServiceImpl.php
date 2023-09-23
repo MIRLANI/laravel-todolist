@@ -12,14 +12,14 @@ class UserServiceImpl implements UserService
         'mirlani' => "rahasia"
     ];
 
-    public function login(string $username, string $password): bool
+    public function login(string $user, string $password): bool
     {
         
-        if(!isset($this->users[$username])){
+        if(!isset($this->users[$user])){
             return false;
         }
 
-        $correntPassword = $this->users[$username];
+        $correntPassword = $this->users[$user];
         return $password == $correntPassword;
     }
 }

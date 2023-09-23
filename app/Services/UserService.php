@@ -6,5 +6,5 @@ namespace App\Services;
 
 interface UserService
 {
-    public function login(string $username, string $password):bool;
+    public function login(string $user, string $password):bool;
 }
